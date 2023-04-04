@@ -11,24 +11,36 @@
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
 #     **Вывод:** Парам пам-пам 
 
-d = ['а', 'ы', 'я', 'у', 'ю', 'о', 'е', 'ё', 'э', 'и']
+# d = ['а', 'ы', 'я', 'у', 'ю', 'о', 'е', 'ё', 'э', 'и']
 
-text = input("Введите стих: ") # Фраза может состоять из одного слова, если во фразе несколько слов, то они разделяются дефисами. 
-# Фразы отделяются друг от друга пробелами.
-list_of_words = text.split()
+# text = input("Введите стих: ") # Фраза может состоять из одного слова, если во фразе несколько слов, то они разделяются дефисами. 
+# # Фразы отделяются друг от друга пробелами.
+# list_of_words = text.split()
 
-list_result = []
-for i in range(len(list_of_words)):
-    list_result.append(0)
-    for j in d:
-        list_result[i] += list_of_words[i].count(j)
+# list_result = []
+# for i in range(len(list_of_words)):
+#     list_result.append(0)
+#     for j in d:
+#         list_result[i] += list_of_words[i].count(j)
 
-print("Количество гласных в словах:", list_result)
+# print("Количество гласных в словах:", list_result)
 
-def find_vowels(characteristic, objects):
-    for i in range(len(list_result) - 1):
-        if(list_result[i]) !=(list_result[i + 1]):
-            return False
-    return True
+# def find_vowels(characteristic, objects):
+#     for i in range(len(list_result) - 1):
+#         if(list_result[i]) !=(list_result[i + 1]):
+#             return False
+#     return True
 
-print("Парам пам-пам") if find_vowels(list_result, list_of_words) else print("Пам парам")
+# print("Парам пам-пам") if find_vowels(list_result, list_of_words) else print("Пам парам")
+
+
+
+
+# Задача 36: 
+
+def print_operation_table(operation, num_rows=6, num_columns=6):
+    for i in range(1, num_rows + 1):
+        print()
+        for j in range(1, num_columns + 1):
+            print('''{:<3}'''.format(operation(i,j)), end=" ")
+print_operation_table(lambda x, y: x * y)
